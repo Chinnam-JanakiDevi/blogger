@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Include Bootstrap WYSIWYG -->
+    <script
+        src="https://cdn.rawgit.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/master/dist/bootstrap3-wysihtml5.all.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Include Bootstrap WYSIWYG CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/master/src/bootstrap3-wysihtml5.css">
+
+
+    <link rel="stylesheet" href="blog.css">
+    <script src="/script.js"></script>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- <li style="float:right"><a class="active" href="#about">About</a></li> -->
+          <li style="float:right">
+            <div class="add_post_button">
+              <button>
+                <h3><a href="/view">View Posts</a></h3>
+              </button>
+              <button>
+                <h3><a href="/addpost">+ Add Post</a></h3>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="/addpost" method="post" role="form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" placeholder="Title" />
+                    </div>
+                    <div class="form-group">
+                        <label> Image </label>
+                        <div class="input-group">
+
+                            <span class="input-group-btn">
+                                <span class="btn btn-primary btn-file">
+                                    Browse<input type="file" name="multiple_input" class="form-control" multiple>
+                                </span>
+                            </span>
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control bcontent" name="content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="Submit" value="Add Post" class="btn btn-primary form-control" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

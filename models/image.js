@@ -1,11 +1,8 @@
 const mongoose=require('mongoose');
 
 const blogSchema = {
-    image: {
-        data: Buffer,
-        contentType: String
-    }
+    Picture : String
  }
  
- const image = mongoose.model("image", blogSchema);
+ const image = mongoose.model("picture", blogSchema);
  module.exports=image;

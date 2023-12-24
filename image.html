@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post"  action="/multiplepost" enctype="multipart/form-data">        
+        <div class="form-group">
+          <label> Image </label>
+          <div class="input-group">
+
+            <span class="input-group-btn">
+              <span class="btn btn-primary btn-file">
+                Browse<input type="file" name="multiple_input"  class="form-control" multiple>
+
+              </span>
+            </span>
+            <input type="text" class="form-control" readonly>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" name="Submit" value="Publish" class="btn btn-primary form-control" />
+        </div>
+      </form>
+    
+</body>
+</html>

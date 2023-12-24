@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Include Bootstrap WYSIWYG -->
+    <script
+        src="https://cdn.rawgit.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/master/dist/bootstrap3-wysihtml5.all.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Include Bootstrap WYSIWYG CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/bootstrap-wysiwyg/bootstrap3-wysiwyg/master/src/bootstrap3-wysihtml5.css">
+
+
+    <link rel="stylesheet" href="blog.css">
+    <script src="/script.js"></script>
+</head>
+
+<style>
+    img {
+
+        width: 100%;
+        border: solid 1px #ccc;
+
+    }
+
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li style="float:right"><a class="active" href="#about">About</a></li> -->
+            <li style="float:right">
+                <div class="add_post_button">
+                    <button>
+                        <h3><a href="/view">View Posts</a></h3>
+                    </button>
+                    <button>
+                        <h3><a href="/addpost">+ Add Post</a></h3>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>All Posts</h1>
+            </div>
+            <div class="col-lg-12">
+                <a href="/" class="btn btn-primary">Go Back</a>
+            </div>
+
+            <% x.forEach((y)=> { %>
+                <div class="col-lg-4 mb-4">
+                    <div class="card" style="border: 1px solid black;">
+                        <h5 class="card-title">
+                            <h2>Title:</h2>
+                           <h4> <%= y.title %></h4>
+                        </h5>
+                        <img src="/images/<%= y.Picture %>" class="card-img-top" alt="Image" width="100px"
+                            height="250px">
+                        <div class="card-body">
+                            <h2>Content:</h2>
+                            <p class="card-text">
+                                <h4><%= y.content %></h4>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+</body>
+
+</html>
