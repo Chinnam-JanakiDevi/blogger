@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(37, 225, 16, 0.564);
+}
+
+.navbar li {
+    float: left;
+    border: 1px black;
+    margin: 2px;
+
+}
+
+.navbar li a {
+    display: block;
+    color:rgba(0, 0, 0, 0.849);
+    font-size: 30px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 4px;
+    
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: wheat;
+}
+
+/* .active {
+    background-color: #04AA6D;
+} */
+
+.navbar ul li .add_post_button button{   
+    background-color:rgb(216, 90, 90);
+    margin: 2px;
+    padding: 2px;
+}
+
+.navbar .add_post_button button:hover {
+    background-color: rgb(214, 22, 22);
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+/* this is only due to codepen display don't use this outside of codepen */
+.container {
+  padding-top: 20px;
+}
