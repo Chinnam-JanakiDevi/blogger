@@ -8,7 +8,8 @@ body{
     padding: 0;
     overflow: hidden;
     /* background-color: rgba(37, 225, 16, 0.564); */
-    background-color: rgba(132, 107, 107, 0.598);
+    /* background-color: rgba(132, 107, 107, 0.598); */
+    background-color: rgba(0, 81, 255, 0.495);
 }
 
 .navbar li {
